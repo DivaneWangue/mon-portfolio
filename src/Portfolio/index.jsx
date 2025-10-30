@@ -13,7 +13,7 @@ const Hero = () => {
             <div className="photo-wrapper">
               <img
                 src="src/assets/mon-profil.jpg"
-                alt="Photo de Divane Mael Wangue"
+                alt="Divane Mael Wangue"
                 className="profile-photo"
               />
               
@@ -22,7 +22,7 @@ const Hero = () => {
           </div>
 
           <div className="info-card">
-            <h1 className="main-title">Divane Mael Wangue</h1>
+            <h1 className="main-title">Divane Mael WANGUE</h1>
             <p className="subtitle">Développeur Web Full Stack</p>
             <p className="description">
               Étudiant en 3ᵉ année de Bachelor CDWFS à 3iL Ingénieurs (Limoges), passionné par le développement web. 
@@ -55,11 +55,11 @@ const Hero = () => {
 const TechnicalSkills = () => {
   const skills = [
     { category: 'Langages', items: ['HTML', 'CSS', 'JavaScript', 'python', 'php','Java'], icon: '💻' },
-    { category: 'Frameworks', items: ['React', 'Laravel', 'Svelte', 'Node.js','Svelte'], icon: '⚛️' },
-    { category: 'Librairies', items: ['React', 'Vite', 'Supabase', 'Scss','Lucide-React',], icon: '💻' },
+    { category: 'Frameworks', items: ['React', 'Laravel', 'Svelte','Svelte'], icon: '⚛️' },
+    { category: 'Librairies', items: ['Vite', 'Supabase', 'Scss','Lucide-React',], icon: '💻' },
     { category: 'Bases de données', items: ['MySQL', 'MongoDB','Prisma'], icon: '🗄️' },
     { category: 'Méthodologies', items: ['Agile', 'Scrum', 'Merise'], icon: '🔧' },
-    { category: 'Outils', items: ['Git', 'GitHub', 'Vercel', 'PostHog', 'Figma', 'Docker'], icon: '🛠️' }
+    { category: 'Outils', items: ['Git', 'GitHub', 'Vercel', 'PostHog', 'Figma', 'Docker','Node.js'], icon: '🛠️' }
   ];
 
   return (
@@ -92,7 +92,7 @@ const AnalyticalSkills = () => {
   const skills = [
     'Conception et modélisation de systèmes d\'information (UML)',
     'Création, modification et rattachement de base de données',
-    'Gestion de projet web et logiciel',
+    'Gestion de projet et méthodologies agiles (Scrum, Kanban)',
     'Analyse de données et résolution de problèmes (Excel, Power BI)'
   ];
 
@@ -204,6 +204,25 @@ const Projects = () => {
 };
 
 // Open Source Component
+const contributions = [
+  {
+    id: 1,
+    title: "Projet 1",
+    description: "Description",
+    repo: "organisation/nom-du-repo",
+    commits: 15,
+    link: "https://github.com/organisation/nom-du-repo"
+  },
+  {
+    id: 2,
+    title: "Projet 2",
+    description: "Description",
+    repo: "organisation/autre-repo",
+    commits: 8,
+    link: "https://github.com/organisation/autre-repo"
+  }
+];
+
 const OpenSource = () => {
   return (
     <section className="section">
@@ -212,25 +231,25 @@ const OpenSource = () => {
         Contributions Open Source
       </h2>
       <div className="opensource-container">
-        {[1, 2].map(i => (
-          <div key={i} className="opensource-card">
+        {contributions.map((item) => (
+          <a
+            key={item.id}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="opensource-card"
+            style={{ textDecoration: 'none' }}
+          >
             <div className="opensource-content">
               <span className="opensource-icon">📁</span>
               <div className="opensource-info">
-                <h3 className="opensource-title">Nom du projet</h3>
+                <h3 className="opensource-title">{item.title}</h3>
                 <p className="opensource-description">
-                  Description de votre contribution au projet open source.
+                  {item.description}
                 </p>
-                <div className="opensource-meta">
-                  <span className="meta-item">
-                    <span>🐙</span>
-                    username/repo
-                  </span>
-                  <span>• 10 commits</span>
-                </div>
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>
