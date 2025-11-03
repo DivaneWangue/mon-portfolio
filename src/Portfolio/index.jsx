@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Code, Database, Briefcase, Award } from 'lucide-react';
 import './index.scss';
+import Mon_profil from '../assets/mon-profil.jpg';
 
 // Hero Component
 const Hero = () => {
@@ -12,8 +13,8 @@ const Hero = () => {
           <div className="photo-container">
             <div className="photo-wrapper">
               <img
-                src="src/assets/mon-profil.jpg"
-                alt="Ma photo de profil"
+                src={Mon_profil}
+                alt="Photo de Profil"
                 className="profile-photo"
               />
               
