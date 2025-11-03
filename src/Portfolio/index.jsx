@@ -13,7 +13,7 @@ const Hero = () => {
             <div className="photo-wrapper">
               <img
                 src="src/assets/mon-profil.jpg"
-                alt="Divane Mael Wangue"
+                alt=""
                 className="profile-photo"
               />
               
@@ -42,7 +42,10 @@ const Hero = () => {
               <div className="contact-item">
                 <MapPin size={16} />
                 <span>Limoges</span>
-              </div>
+                </div>
+              <div className="contact-info">
+              <a href="Divane_CV.pdf" download="CV_Divane.pdf" className="cv-button">Télécharger mon CV</a>
+               </div>
             </div>
           </div>
         </div>
@@ -51,7 +54,7 @@ const Hero = () => {
   );
 };
 
-// Technical Skills Component
+// Competences Techniques Component
 const TechnicalSkills = () => {
   const skills = [
     { category: 'Langages', items: ['HTML', 'CSS', 'JavaScript', 'python', 'php','Java'], icon: '💻' },
@@ -87,7 +90,7 @@ const TechnicalSkills = () => {
   );
 };
 
-// Analytical Skills Component
+// Competences Analytiques Component
 const AnalyticalSkills = () => {
   const skills = [
     'Conception et modélisation de systèmes d\'information (UML)',
@@ -153,21 +156,21 @@ const Projects = () => {
       title: "Comparateur de prix",
       description: "Site web permettant de comparer les prix des produits dans différents supermarchés. Développé avec Svelte et Prisma.",
       tags: ["Svelte", "Scss", "Prisma"],
-      link: "https://github.com/DivaneWangue/Projet-soutenance-bts"
+      link: "https://wangue-price-comparator-bts.vercel.app/"
     },
     {
       id: 2,
       title: "Mini jeu narratif RPG",
       description: "Prototype d’un mini jeu narratif où le joueur découvre l’histoire de la princesse Gronnella qui a été enlevée et doit la sauver.",
-      tags: ["HTML", "CSS", "JavaScript", "MySQL"],
+      tags: ["HTML", "CSS", "JavaScript"],
       link: "https://github.com/votre-username/projet2"
     },
     {
       id: 3,
-      title: "Portfolio personnel",
-      description: "Portfolio interactif développé avec React et Vite, utilisant SASS pour le styling.",
-      tags: ["React", "Vite", "SASS"],
-      link: "https://github.com/DivaneWangue/mon-portfolio"
+      title: "Plateforme web Jobs Etudiants",
+      description: "Plateforme web permettant de mettre en relation les étudiants et les entreprises en recherche de nouveaux talents.",
+      tags: ["React", "Vite", "Supabase"],
+      link: "https://my-getjop-app.netlify.app/"
     }
   ];
 
@@ -227,8 +230,8 @@ const OpenSource = () => {
   return (
     <section className="section">
       <h2 className="section-title">
-        <span className="title-icon">🌟</span>
-        Contributions Open Source
+        <span className="title-icon"></span>
+      
       </h2>
       <div className="opensource-container">
         {contributions.map((item) => (
@@ -315,7 +318,7 @@ const Languages = () => {
   );
 };
 
-// Strengths Component
+// Atouts Component
 const Strengths = () => {
   const strengths = [
     'Adaptabilité et apprentissage rapide',
@@ -352,7 +355,7 @@ const Hobbies = () => {
     { name: 'Football', icon: '⚽' },
     { name: 'Musique', icon: '🎵' },
     { name: 'Lecture', icon: '📚' },
-    { name: 'Voyage', icon: '✈️' }
+    { name: 'Voyages', icon: '✈️' }
   ];
 
   return (

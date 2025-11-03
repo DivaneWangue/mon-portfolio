@@ -144,39 +144,29 @@ html, body {
   }
 }
 
-// Photo
-.photo-container {
-  position: relative;
-  flex-shrink: 0;
-}
-
 .photo-wrapper {
-  width: 14rem;
-  height: 14rem;
+  width: 18rem;  
+  height: 18rem;
   border-radius: 50%;
   background: linear-gradient(to bottom right, $primary, $secondary);
   padding: 0.3rem;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   overflow: hidden;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
 }
 
-  
-
-.photo-glow {
-  position: absolute;
-  inset: 0;
+/* Ajoutez ce style pour l'image à l'intérieur */
+.photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center; 
   border-radius: 50%;
-  background: rgba($primary, 0.2);
-  filter: blur(40px);
-  transition: all 0.3s;
-  pointer-events: none;
-  
-  .photo-container:hover & {
-    background: rgba($primary, 0.3);
-  }
 }
 
-// Info Card
+
 .info-card {
   flex: 1;
   text-align: center;
@@ -257,6 +247,27 @@ html, body {
   }
 }
 
+.cv-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(to right, $primary, $secondary);
+  color: $text-primary;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-left: 1.5rem;
+  margin-bottom: 0.3rem;
+  transition: all 0.3s;
+  box-shadow: 0 4px 19px rgba($primary, 0.3);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba($primary, 0.4);
+  }
+}
 // Sections
 .section {
   margin-bottom: 5rem;
@@ -498,8 +509,12 @@ html, body {
 }
 
 // Open Source
+
+.opensource-section {
+  display: hidden;
+}
 .opensource-container {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 1.5rem;
 }
@@ -510,7 +525,7 @@ html, body {
 }
 
 .opensource-content {
-  display: flex;
+  display: none;
   align-items: flex-start;
   gap: 1rem;
 }
@@ -538,7 +553,7 @@ html, body {
 }
 
 .opensource-meta {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 1rem;
   font-size: 0.875rem;
@@ -546,7 +561,7 @@ html, body {
 }
 
 .meta-item {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 0.25rem;
 }
