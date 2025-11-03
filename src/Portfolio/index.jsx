@@ -13,7 +13,7 @@ const Hero = () => {
             <div className="photo-wrapper">
               <img
                 src="src/assets/mon-profil.jpg"
-                alt=""
+                alt="Ma photo de profil"
                 className="profile-photo"
               />
               
@@ -58,7 +58,7 @@ const Hero = () => {
 const TechnicalSkills = () => {
   const skills = [
     { category: 'Langages', items: ['HTML', 'CSS', 'JavaScript', 'python', 'php','Java'], icon: '💻' },
-    { category: 'Frameworks', items: ['React', 'Laravel', 'Svelte','Svelte'], icon: '⚛️' },
+    { category: 'Frameworks', items: ['React', 'Laravel', 'Svelte',], icon: '⚛️' },
     { category: 'Librairies', items: ['Vite', 'Supabase', 'Scss','Lucide-React',], icon: '💻' },
     { category: 'Bases de données', items: ['MySQL', 'MongoDB','Prisma'], icon: '🗄️' },
     { category: 'Méthodologies', items: ['Agile', 'Scrum', 'Merise'], icon: '🔧' },
