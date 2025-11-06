@@ -511,10 +511,10 @@ html, body {
 // Open Source
 
 .opensource-section {
-  display: hidden;
+  display: flex;
 }
 .opensource-container {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
@@ -525,7 +525,7 @@ html, body {
 }
 
 .opensource-content {
-  display: none;
+  display: flex;
   align-items: flex-start;
   gap: 1rem;
 }
@@ -553,7 +553,7 @@ html, body {
 }
 
 .opensource-meta {
-  display: none;
+  display: flex;
   align-items: center;
   gap: 1rem;
   font-size: 0.875rem;
@@ -561,7 +561,7 @@ html, body {
 }
 
 .meta-item {
-  display: none;
+  display: flex;
   align-items: center;
   gap: 0.25rem;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Code, Database, Briefcase, Award } from 'lucide-react';
+import { Mail, Phone, MapPin, Code, Database, Briefcase, Award, Github, Linkedin } from 'lucide-react';
 import './index.scss';
 import Mon_profil from '../assets/mon-profil.jpg';
 
@@ -58,8 +58,8 @@ const Hero = () => {
 // Competences Techniques Component
 const TechnicalSkills = () => {
   const skills = [
-    { category: 'Langages', items: ['HTML', 'CSS', 'JavaScript', 'python', 'php','Java'], icon: '💻' },
-    { category: 'Frameworks', items: ['React', 'Laravel', 'Svelte',], icon: '⚛️' },
+    { category: 'Langages', items: ['python', 'php','Java'], icon: '💻' },
+    { category: 'Frameworks', items: ['React', 'Laravel', 'Svelte','Font-Awesome'], icon: '⚛️' },
     { category: 'Librairies', items: ['Vite', 'Supabase', 'Scss','Lucide-React',], icon: '💻' },
     { category: 'Bases de données', items: ['MySQL', 'MongoDB','Prisma'], icon: '🗄️' },
     { category: 'Méthodologies', items: ['Agile', 'Scrum', 'Merise'], icon: '🔧' },
@@ -164,7 +164,6 @@ const Projects = () => {
       title: "Mini jeu narratif RPG",
       description: "Prototype d’un mini jeu narratif où le joueur découvre l’histoire de la princesse Gronnella qui a été enlevée et doit la sauver.",
       tags: ["HTML", "CSS", "JavaScript"],
-      link: "https://github.com/votre-username/projet2"
     },
     {
       id: 3,
@@ -211,27 +210,17 @@ const Projects = () => {
 const contributions = [
   {
     id: 1,
-    title: "Projet 1",
-    description: "Description",
-    repo: "organisation/nom-du-repo",
-    commits: 15,
-    link: "https://github.com/organisation/nom-du-repo"
+    title: "Fork Commit Merge - Ajout d'une carte",
+    description: "Ajout d'un nouveau composant ( Card ) avec React.js et Vite pour améliorer l'interface utilisateur.",
+    link: "https://github.com/fork-commit-merge"
   },
-  {
-    id: 2,
-    title: "Projet 2",
-    description: "Description",
-    repo: "organisation/autre-repo",
-    commits: 8,
-    link: "https://github.com/organisation/autre-repo"
-  }
 ];
 
 const OpenSource = () => {
   return (
     <section className="section">
       <h2 className="section-title">
-        <span className="title-icon"></span>
+        <span className="title-icon">Contributions Open Source</span>
       
       </h2>
       <div className="opensource-container">
@@ -311,7 +300,7 @@ const Languages = () => {
     <section className="section">
       <h2 className="section-title">🌍 Langues Parlées</h2>
       <div className="languages-container">
-        <span className="language-tag">🇫🇷 Français B2</span>
+        <span className="language-tag">🇫🇷 Français </span>
         <span className="language-tag">🇬🇧 Anglais C1</span>
         <span className="language-tag">🇪🇸 Espagnol B1</span>
       </div>
@@ -382,10 +371,10 @@ const Footer = () => {
         <p className="footer-text">© 2025 Divane Mael Wangue. Tous droits réservés.</p>
         <div className="footer-social">
           <a href="https://github.com/DivaneWangue" target="_blank" rel="noopener noreferrer" className="social-link">
-            <span></span> GitHub
+            <span><Github size={40} /></span> GitHub
           </a>
           <a href="https://linkedin.com/in/divane-mael-wangue-49a567350" target="_blank" rel="noopener noreferrer" className="social-link">
-            <span ></span> LinkedIn
+           <span><Linkedin size={40} /></span> LinkedIn
           </a>
         </div>
       </div>
