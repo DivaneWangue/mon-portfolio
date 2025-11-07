@@ -253,7 +253,7 @@ const OpenSource = () => {
 const Education = () => {
   const education = [
     {
-      title: 'Bachelor Concepteur & Développeur Web Full Stack',
+      title: 'Bachelor Concepteur & Développeur Web Full Stack (en cours)',
       school: '3iL Ingénieurs - Limoges',
       period: '2025 - 2026'
     },
