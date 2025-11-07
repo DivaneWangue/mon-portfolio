@@ -70,7 +70,7 @@ const TechnicalSkills = () => {
     <section className="section">
       <h2 className="section-title">
         <span className="title-icon">💻</span>
-        Compétences Techniques
+        Compétences techniques
       </h2>
       <div className="skills-grid">
         {skills.map((skill, idx) => (
@@ -103,8 +103,8 @@ const AnalyticalSkills = () => {
   return (
     <section className="section">
       <h2 className="section-title">
-        <span className="title-icon">📊</span>
-        Compétences Analytiques et Gestion
+        <span className="title-icon"></span>
+        Compétences analytiques et gestion
       </h2>
       <div className="analytical-grid">
         {skills.map((skill, idx) => (
@@ -123,8 +123,8 @@ const Experience = () => {
   return (
     <section className="section">
       <h2 className="section-title">
-        <span className="title-icon">💼</span>
-        Expériences Professionnelles
+        <span className="title-icon"></span>
+        Expériences professionnelles
       </h2>
       <div className="experience-card">
         <div className="experience-header">
@@ -176,7 +176,7 @@ const Projects = () => {
 
   return (
     <section className="section">
-      <h2 className="section-title">🚀 Projets Personnels</h2>
+      <h2 className="section-title"> Projets personnels</h2>
       <div className="projects-grid">
         {projects.map((project) => (
           <a 
@@ -234,7 +234,7 @@ const OpenSource = () => {
             style={{ textDecoration: 'none' }}
           >
             <div className="opensource-content">
-              <span className="opensource-icon">📁</span>
+              <span className="opensource-icon"></span>
               <div className="opensource-info">
                 <h3 className="opensource-title">{item.title}</h3>
                 <p className="opensource-description">
@@ -257,15 +257,15 @@ const Education = () => {
       school: '3iL Ingénieurs - Limoges',
       period: '2025 - 2026'
     },
+      {
+      title: 'Licence Technologique Génie Logiciel',
+      school: 'IUT Douala',
+      period: '2024 - 2025'
+    },
     {
       title: 'BTS Gestion des Systèmes d\'Information',
       school: 'IUG Douala',
       period: '2022 - 2024'
-    },
-    {
-      title: 'Licence Technologique Génie Logiciel',
-      school: 'IUT Douala',
-      period: '2024 - 2025'
     },
     {
       title: 'Baccalauréat Trilingue',
@@ -276,7 +276,7 @@ const Education = () => {
 
   return (
     <section className="section">
-      <h2 className="section-title">🎓 Formations</h2>
+      <h2 className="section-title"> Formations</h2>
       <div className="education-container">
         {education.map((edu, idx) => (
           <div key={idx} className="education-card">
@@ -298,7 +298,7 @@ const Education = () => {
 const Languages = () => {
   return (
     <section className="section">
-      <h2 className="section-title">🌍 Langues Parlées</h2>
+      <h2 className="section-title"> Langues parlées</h2>
       <div className="languages-container">
         <span className="language-tag">🇫🇷 Français </span>
         <span className="language-tag">🇬🇧 Anglais C1</span>
@@ -321,7 +321,7 @@ const Strengths = () => {
   return (
     <section className="section">
       <h2 className="section-title">
-        <span className="title-icon">🏆</span>
+        <span className="title-icon"></span>
         Atouts
       </h2>
       <div className="strengths-grid">
@@ -350,7 +350,7 @@ const Hobbies = () => {
 
   return (
     <section className="section">
-      <h2 className="section-title">🎯 Loisirs & Centres d'Intérêt</h2>
+      <h2 className="section-title"> Loisirs & Centres d'Intérêt</h2>
       <div className="hobbies-grid">
         {hobbies.map((hobby, idx) => (
           <div key={idx} className="hobby-card">
