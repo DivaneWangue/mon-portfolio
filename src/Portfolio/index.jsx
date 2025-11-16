@@ -267,11 +267,6 @@ const Education = () => {
       school: 'IUG Douala',
       period: '2022 - 2024'
     },
-    {
-      title: 'Baccalauréat Trilingue',
-      school: 'Lycée Bilingue de Njombe',
-      period: '2020 - 2021'
-    }
   ];
 
   return (
