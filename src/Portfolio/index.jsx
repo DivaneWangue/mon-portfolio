@@ -27,7 +27,7 @@ const Hero = () => {
             <p className="subtitle">Développeur Web Full Stack</p>
             <p className="description">
               Étudiant en 3ᵉ année de Bachelor CDWFS à 3iL Ingénieurs (Limoges), passionné par le développement web. 
-              Je recherche un stage professionnel pour mettre en pratique mes compétences en front-end et back-end 
+              Je recherche un stage professionnel  d'un durée minimum de 3 mois pour mettre en pratique mes compétences en front-end et back-end 
               et contribuer à des projets innovants.
             </p>
             
@@ -59,8 +59,8 @@ const Hero = () => {
 const TechnicalSkills = () => {
   const skills = [
     { category: 'Langages', items: ['python', 'php','Java'], icon: '💻' },
-    { category: 'Frameworks', items: ['React', 'Laravel', 'Svelte','Font-Awesome'], icon: '⚛️' },
-    { category: 'Librairies', items: ['Vite', 'Supabase', 'Scss','Lucide-React',], icon: '💻' },
+    { category: 'Frameworks', items: ['React', 'Laravel', 'Svelte',], icon: '⚛️' },
+    { category: 'Librairies', items: ['Vite', 'Supabase', 'Scss','Lucide-React','Font-Awesome'], icon: '💻' },
     { category: 'Bases de données', items: ['MySQL', 'MongoDB','Prisma'], icon: '🗄️' },
     { category: 'Méthodologies', items: ['Agile', 'Scrum', 'Merise'], icon: '🔧' },
     { category: 'Outils', items: ['Git', 'GitHub', 'Vercel', 'PostHog', 'Figma', 'Docker','Node.js'], icon: '🛠️' }
@@ -69,7 +69,7 @@ const TechnicalSkills = () => {
   return (
     <section className="section">
       <h2 className="section-title">
-        <span className="title-icon">💻</span>
+        <span className="title-icon"></span>
         Compétences techniques
       </h2>
       <div className="skills-grid">
