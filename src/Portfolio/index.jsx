@@ -26,8 +26,8 @@ const Hero = () => {
             <h1 className="main-title">Divane Mael WANGUE</h1>
             <p className="subtitle">Développeur Web Full Stack</p>
             <p className="description">
-              Étudiant en 3ᵉ année de Bachelor CDWFS à 3iL Ingénieurs (Limoges), passionné par le développement web. 
-              Je recherche un stage professionnel  d'un durée minimum de 3 mois pour mettre en pratique mes compétences en front-end et back-end 
+              Étudiant en 3ᵉ année de Bachelor CDWFS à 3iL Ingénieurs (Limoges), passionné par le développement web,le DevOps, l'architecture logicielle et les bonnes pratiques. 
+              Je suis à la recherche d'un stage professionnel  d'un durée minimum de 3 mois pour mettre en pratique mes compétences 
               et contribuer à des projets innovants.
             </p>
             
@@ -59,11 +59,10 @@ const Hero = () => {
 const TechnicalSkills = () => {
   const skills = [
     { category: 'Langages', items: ['python', 'php','Java'], icon: '💻' },
-    { category: 'Frameworks', items: ['React', 'Laravel', 'Svelte',], icon: '⚛️' },
-    { category: 'Librairies', items: ['Vite', 'Supabase', 'Scss','Lucide-React','Font-Awesome'], icon: '💻' },
-    { category: 'Bases de données', items: ['MySQL', 'MongoDB','Prisma'], icon: '🗄️' },
+    { category: 'Librairies et Frameworks', items: ['React', 'Laravel', 'Svelte','Vite','Scss','Lucide-React','Prisma'], icon: '⚛️' },
+    { category: 'Bases de données', items: ['MySQL', 'MongoDB',], icon: '🗄️' },
     { category: 'Méthodologies', items: ['Agile', 'Scrum', 'Merise'], icon: '🔧' },
-    { category: 'Outils', items: ['Git', 'GitHub', 'Vercel', 'PostHog', 'Figma', 'Docker','Node.js'], icon: '🛠️' }
+    { category: 'Outils', items: ['Git', 'GitLab', 'GitHub', 'Vercel', 'PostHog', 'Figma', 'Docker','Node.js'], icon: '🛠️' }
   ];
 
   return (
@@ -124,7 +123,7 @@ const Experience = () => {
     <section className="section">
       <h2 className="section-title">
         <span className="title-icon"></span>
-        Expériences professionnelles
+        Expériences 
       </h2>
       <div className="experience-card">
         <div className="experience-header">
