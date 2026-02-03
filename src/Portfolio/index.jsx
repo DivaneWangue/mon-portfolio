@@ -58,11 +58,10 @@ const Hero = () => {
 // Competences Techniques Component
 const TechnicalSkills = () => {
   const skills = [
-    { category: 'Langages', items: ['python', 'php','Java'], icon: '💻' },
     { category: 'Librairies et Frameworks', items: ['React', 'Laravel', 'Svelte','Vite','Scss','Lucide-React','Prisma'], icon: '⚛️' },
     { category: 'Bases de données', items: ['MySQL', 'MongoDB',], icon: '🗄️' },
     { category: 'Méthodologies', items: ['Agile', 'Scrum', 'Merise'], icon: '🔧' },
-    { category: 'Outils', items: ['Git', 'GitLab', 'GitHub', 'Vercel', 'PostHog', 'Figma', 'Docker','Node.js'], icon: '🛠️' }
+    { category: 'Outils', items: ['Git', 'GitLab', 'GitHub', 'Vercel', 'PostHog', 'Figma', 'Docker','Node.js','Terraform','Ansible','Jenkins','Kubernetes'], icon: '🛠️' }
   ];
 
   return (
