@@ -45,7 +45,7 @@ const Hero = () => {
                 <span>Limoges</span>
                 </div>
               <div className="contact-info">
-              <a href="Divane_CV.pdf" download="CV_Divane.pdf" className="cv-button">Télécharger mon CV</a>
+              <a href="Divane_CV.pdf" download="Divane_CV.pdf" className="cv-button">Télécharger mon CV</a>
                </div>
             </div>
           </div>
