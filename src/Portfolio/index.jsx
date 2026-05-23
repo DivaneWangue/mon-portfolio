@@ -6,52 +6,44 @@ import Mon_profil from '../assets/mon-profil.jpg';
 // Hero Component
 const Hero = () => {
   return (
-    <div className="">
+    <section className="hero-section">
       <div className="hero-background"></div>
-      <div className="hero-container">
-        <div className="hero-content">
-          <div className="photo-container">
-            <div className="photo-wrapper">
-              <img
-                src={Mon_profil}
-                alt="Photo de Profil"
-                className="profile-photo"
-              />
-              
-            </div>
-            <div className="photo-glow"></div>
+      <div className="hero-grid">
+        <div className="hero-panel">
+          <h1 className="hero-title">Divane Mael WANGUE</h1>
+          <p className="hero-subtitle">Développeur Web Full Stack — React, Laravel, DevOps & Cloud</p>
+          <p className="hero-description">
+            Étudiant en 3ᵉ année de Bachelor CDWFS à 3iL Ingénieurs (Limoges), passionné par le développement web, le DevOps, l'architecture logicielle et les bonnes pratiques. Je cherche un stage de 3 mois minimum pour contribuer à des projets innovants.
+          </p>
+          <div className="hero-actions">
+            <a href="CV_Divane_Stage.pdf" download="CV_Divane_Stage.pdf" className="hero-button">
+              Télécharger mon CV
+            </a>
           </div>
-
-          <div className="info-card">
-            <h1 className="main-title">Divane Mael WANGUE</h1>
-            <p className="subtitle">Développeur Web Full Stack</p>
-            <p className="description">
-              Étudiant en 3ᵉ année de Bachelor CDWFS à 3iL Ingénieurs (Limoges), passionné par le développement web,le DevOps, l'architecture logicielle et les bonnes pratiques. 
-              Je suis à la recherche d'un stage professionnel  d'un durée minimum de 3 mois pour mettre en pratique mes compétences 
-              et contribuer à des projets innovants.
-            </p>
-            
-            <div className="contact-info">
-              <a href="mailto:divanewangue2@gmail.com" className="contact-item">
-                <Mail size={16} />
-                <span>divanewangue2@gmail.com</span>
-              </a>
-              <a href="tel:+33743617761" className="contact-item">
-                <Phone size={16} />
-                <span>+33 7 43 61 77 61</span>
-              </a>
-              <div className="contact-item">
-                <MapPin size={16} />
-                <span>Limoges</span>
-                </div>
-              <div className="contact-info">
-              <a href="Divane_CV.pdf" download="Divane_CV.pdf" className="cv-button">Télécharger mon CV</a>
-               </div>
+          <div className="contact-info">
+            <a href="mailto:divanewangue2@gmail.com" className="contact-item">
+              <Mail size={16} />
+              <span>divanewangue2@gmail.com</span>
+            </a>
+            <a href="tel:+33743617761" className="contact-item">
+              <Phone size={16} />
+              <span>+33 7 43 61 77 61</span>
+            </a>
+            <div className="contact-item">
+              <MapPin size={16} />
+              <span>Limoges</span>
             </div>
           </div>
         </div>
+        <div className="photo-card">
+          <img
+            src={Mon_profil}
+            alt="Photo de Profil"
+            className="profile-photo"
+          />
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -357,6 +349,31 @@ const Hobbies = () => {
 };
 
 // Footer Component
+const Certifications = () => {
+  const certifications = [
+    {
+      title: 'AWS Certified Cloud Practitioner',
+      issuer: 'Amazon Web Services',
+      period: '2026'
+    },
+  ];
+
+  return (
+    <section className="section">
+      <h2 className="section-title">Certifications</h2>
+      <div className="certifications-grid">
+        {certifications.map((cert, idx) => (
+          <div key={idx} className="certification-card">
+            <span className="certification-badge">{cert.period}</span>
+            <h3 className="certification-title">{cert.title}</h3>
+            <p className="certification-issuer">{cert.issuer}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -364,10 +381,10 @@ const Footer = () => {
         <p className="footer-text">© 2025 Divane Mael Wangue. Tous droits réservés.</p>
         <div className="footer-social">
           <a href="https://github.com/DivaneWangue" target="_blank" rel="noopener noreferrer" className="social-link">
-            <span><Github size={40} /></span> GitHub
+            <span><Github size={24} /></span> GitHub
           </a>
           <a href="https://linkedin.com/in/divane-mael-wangue-49a567350" target="_blank" rel="noopener noreferrer" className="social-link">
-           <span><Linkedin size={40} /></span> LinkedIn
+            <span><Linkedin size={24} /></span> LinkedIn
           </a>
         </div>
       </div>
@@ -384,6 +401,7 @@ export default function Portfolio() {
         <AnalyticalSkills />
         <Experience />
         <Projects />
+        <Certifications />
         <OpenSource />
         <Education />
         <Languages />
