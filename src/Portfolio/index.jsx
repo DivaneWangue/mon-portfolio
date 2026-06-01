@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="hero-grid">
         <div className="hero-panel">
           <h1 className="hero-title">Divane Mael WANGUE</h1>
-          <p className="hero-subtitle">Développeur Web Full Stack — React, Laravel, DevOps & Cloud</p>
+          <p className="hero-subtitle">Développeur Web Full Stack — React, Symfony, DevOps & Cloud</p>
           <p className="hero-description">
             Étudiant en 3ᵉ année de Bachelor CDWFS à 3iL Ingénieurs (Limoges), passionné par le développement web, le DevOps, l'architecture logicielle et les bonnes pratiques. Je cherche un stage de 3 mois minimum pour contribuer à des projets innovants.
           </p>
