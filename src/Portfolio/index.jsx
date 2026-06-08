@@ -124,11 +124,13 @@ const Experience = () => {
     },
     {
       id: 2,
-      title: 'Stagiaire Full Stack',
-      company: 'À compléter',
-      period: 'À compléter',
+      title: 'Stagiaire Développeur Full Stack',
+      company: 'LOBO.IMMO',
+      period: 'En cours',
       tasks: [
-        'À compléter'
+        'Concevoir un site web de gestion immobilière pour LOBO.IMMO',
+        'Développement de fonctionnalités de gestion des biens, des clients et des transactions',
+        'Intégration de systèmes de prise de rendez-vous et de notifications pour améliorer l\'expérience utilisateur'
       ]
     }
   ];
