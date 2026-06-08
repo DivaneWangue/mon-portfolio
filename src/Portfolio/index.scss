@@ -831,6 +831,12 @@ body {
 }
 
 // Experience
+.experiences-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .experience-card {
   @include card;
   padding: 2rem;

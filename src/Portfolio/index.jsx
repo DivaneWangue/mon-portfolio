@@ -11,12 +11,13 @@ const Hero = () => {
       <div className="hero-grid">
         <div className="hero-panel">
           <h1 className="hero-title">Divane Mael WANGUE</h1>
-          <p className="hero-subtitle">Développeur Web Full Stack — React, Symfony, DevOps & Cloud</p>
+          <p className="hero-subtitle">Dev Full Stack, DevOps, DevSecOps, Architecte Logiciel, Cloud Computing et Gestion de Projet IT</p>
           <p className="hero-description">
-            Étudiant en 3ᵉ année de Bachelor CDWFS à 3iL Ingénieurs (Limoges), passionné par le développement web, le DevOps, l'architecture logicielle et les bonnes pratiques. Je cherche un stage de 3 mois minimum pour contribuer à des projets innovants.
+            Futur étudiant Expert en Architecture et développement logiciel,
+je recherche une alternance en développement full-stack, DevOps, DevSecOps, Architecture Logicielle, Cloud Computing et Chef de Prijet IT d'une durée de 2 ans avec un intérêt marqué pour l’automatisation des déploiements, la fiabilisation des systèmes et l’industrialisation des environnements cloud.
           </p>
           <div className="hero-actions">
-            <a href="CV_Divane_Stage.pdf" download="CV_Divane_Stage.pdf" className="hero-button">
+            <a href="CV_Divane.pdf" download="CV_Divane.pdf" className="hero-button">
               Télécharger mon CV
             </a>
           </div>
@@ -110,30 +111,54 @@ const AnalyticalSkills = () => {
 
 // Experience Component
 const Experience = () => {
+  const experiences = [
+    {
+      id: 1,
+      title: 'Stagiaire Développement Web',
+      company: 'CETEC SARL',
+      period: 'Août - Octobre 2023',
+      tasks: [
+        'Conception et réalisation d\'un site web comparateur de prix des produits dans les supermarchés',
+        'Gestion de projet et coordination avec l\'équipe technique'
+      ]
+    },
+    {
+      id: 2,
+      title: 'Stagiaire Full Stack',
+      company: 'À compléter',
+      period: 'À compléter',
+      tasks: [
+        'À compléter'
+      ]
+    }
+  ];
+
   return (
     <section className="section">
       <h2 className="section-title">
         <span className="title-icon"></span>
-        Expériences 
+        Expériences
       </h2>
-      <div className="experience-card">
-        <div className="experience-header">
-          <div>
-            <h3 className="experience-title">Stagiaire Développement Web</h3>
-            <p className="experience-company">CETEC SARL</p>
+      <div className="experiences-container">
+        {experiences.map((exp) => (
+          <div key={exp.id} className="experience-card">
+            <div className="experience-header">
+              <div>
+                <h3 className="experience-title">{exp.title}</h3>
+                <p className="experience-company">{exp.company}</p>
+              </div>
+              <span className="experience-date">{exp.period}</span>
+            </div>
+            <ul className="experience-list">
+              {exp.tasks.map((task, idx) => (
+                <li key={idx} className="experience-item">
+                  <span className="list-bullet">•</span>
+                  <span>{task}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-          <span className="experience-date">Août - Octobre 2023</span>
-        </div>
-        <ul className="experience-list">
-          <li className="experience-item">
-            <span className="list-bullet">•</span>
-            <span>Conception et réalisation d'un site web comparateur de prix des produits dans les supermarchés</span>
-          </li>
-          <li className="experience-item">
-            <span className="list-bullet">•</span>
-            <span>Gestion de projet et coordination avec l'équipe technique</span>
-          </li>
-        </ul>
+        ))}
       </div>
     </section>
   );
