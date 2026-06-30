@@ -14,7 +14,7 @@ const Hero = () => {
           <p className="hero-subtitle">Dev Full Stack, DevOps, DevSecOps, Architecte Logiciel, Cloud Computing et Gestion de Projet IT</p>
           <p className="hero-description">
             Futur étudiant Expert en Architecture et développement logiciel,
-je recherche une alternance en développement full-stack, DevOps, DevSecOps, Architecture Logicielle, Cloud Computing et Chef de Prijet IT d'une durée de 2 ans avec un intérêt marqué pour l’automatisation des déploiements, la fiabilisation des systèmes et l’industrialisation des environnements cloud.
+            je recherche une alternance en développement full-stack, DevOps, DevSecOps, Architecture Logicielle, Cloud Computing et Chef de Prijet IT d'une durée de 2 ans avec un intérêt marqué pour l’automatisation des déploiements, la fiabilisation des systèmes et l’industrialisation des environnements cloud.
           </p>
           <div className="hero-actions">
             <a href="CV_Divane.pdf" download="CV_Divane.pdf" className="hero-button">
