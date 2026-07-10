@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Code, Database, Briefcase, Award, Github, Linkedin } from 'lucide-react';
+import { Mail, Phone, Github, Linkedin } from 'lucide-react';
 import './index.scss';
 import Mon_profil from '../assets/mon-profil.jpg';
 
@@ -7,33 +7,30 @@ import Mon_profil from '../assets/mon-profil.jpg';
 const Hero = () => {
   return (
     <section className="hero-section">
-      <div className="hero-background"></div>
       <div className="hero-grid">
         <div className="hero-panel">
           <h1 className="hero-title">Divane Mael WANGUE</h1>
-          <p className="hero-subtitle">Dev Full Stack, DevOps, DevSecOps, Architecte Logiciel, Cloud Computing et Gestion de Projet IT</p>
+          <p className="hero-subtitle">Ingénieur RelOps / DevOps — Release Management, CI/CD, Automatisation & Agents IA</p>
           <p className="hero-description">
-            Futur étudiant Expert en Architecture et développement logiciel,
-            je recherche une alternance en développement full-stack, DevOps, DevSecOps, Architecture Logicielle, Cloud Computing et Chef de Prijet IT d'une durée de 2 ans avec un intérêt marqué pour l’automatisation des déploiements, la fiabilisation des systèmes et l’industrialisation des environnements cloud.
+            Futur Expert en Architecture et Développement Logiciel (Bac+5), je recherche une alternance
+            en Release Management / DevOps de 2 ans (rythme 4 semaines entreprise / 4 semaines école,
+            disponible dès septembre 2026), avec un intérêt marqué pour l'orchestration des releases,
+            l'automatisation des déploiements, la fiabilisation des systèmes et l'intégration d'agents IA
+            dans les processus d'exploitation.
           </p>
+
           <div className="hero-actions">
             <a href="CV_Divane.pdf" download="CV_Divane.pdf" className="hero-button">
-              Télécharger mon CV
+              Télécharger CV
             </a>
-          </div>
-          <div className="contact-info">
             <a href="mailto:divanewangue2@gmail.com" className="contact-item">
-              <Mail size={16} />
+              <Mail size={14} />
               <span>divanewangue2@gmail.com</span>
             </a>
             <a href="tel:+33743617761" className="contact-item">
-              <Phone size={16} />
+              <Phone size={14} />
               <span>+33 7 43 61 77 61</span>
             </a>
-            <div className="contact-item">
-              <MapPin size={16} />
-              <span>Limoges</span>
-            </div>
           </div>
         </div>
         <div className="photo-card">
@@ -51,10 +48,21 @@ const Hero = () => {
 // Competences Techniques Component
 const TechnicalSkills = () => {
   const skills = [
-    { category: 'Librairies et Frameworks', items: ['React', 'Laravel', 'Svelte','Vite','Scss','Lucide-React','Prisma'], icon: '⚛️' },
-    { category: 'Bases de données', items: ['MySQL', 'MongoDB',], icon: '🗄️' },
-    { category: 'Méthodologies', items: ['Agile', 'Scrum', 'Merise'], icon: '🔧' },
-    { category: 'Outils', items: ['Git', 'GitLab', 'GitHub', 'Vercel', 'PostHog', 'Figma', 'Docker','Node.js','Terraform','Ansible','Jenkins','Kubernetes'], icon: '🛠️' }
+    {
+      category: 'RelOps & Release Management',
+      items: ['Validation & intégration de code', 'Orchestration de release process', 'Gestion des branches & versionning', 'Management transversal d\'équipes R&D', 'Amélioration continue des processus', 'Documentation des procédures'],
+      icon: 'REL'
+    },
+    {
+      category: 'DevOps & Automatisation',
+      items: ['Jenkins', 'Ansible', 'Docker', 'Kubernetes (notions)', 'GitLab CI', 'GitHub Actions', 'Terraform', 'Linux (Ubuntu, Debian)', 'Bash'],
+      icon: 'OPS'
+    },
+    {
+      category: 'Développement & IA',
+      items: ['Python', 'React', 'Supabase / API REST', 'SQL', 'Agents IA (LLM)', 'Modélisation UML'],
+      icon: 'DEV'
+    }
   ];
 
   return (
@@ -82,20 +90,19 @@ const TechnicalSkills = () => {
   );
 };
 
-// Competences Analytiques Component
-const AnalyticalSkills = () => {
+// Soft Skills Component
+const SoftSkills = () => {
   const skills = [
-    'Conception et modélisation de systèmes d\'information (UML)',
-    'Création, modification et rattachement de base de données',
-    'Gestion de projet et méthodologies agiles (Scrum, Kanban)',
-    'Analyse de données et résolution de problèmes (Excel, Power BI)'
+    'Rigueur et curiosité technique',
+    'Amélioration continue',
+    'Écoute et adaptation'
   ];
 
   return (
     <section className="section">
       <h2 className="section-title">
         <span className="title-icon"></span>
-        Compétences analytiques et gestion
+        Soft skills
       </h2>
       <div className="analytical-grid">
         {skills.map((skill, idx) => (
@@ -114,23 +121,24 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      title: 'Stagiaire Développement Web',
-      company: 'CETEC SARL',
-      period: 'Août - Octobre 2023',
+      title: 'Ingénieur DevOps / RelOps — Full Stack',
+      company: 'FANANAS-HORTOLARY-LUPETTE',
+      period: 'Juin - Sept. 2026',
       tasks: [
-        'Conception et réalisation d\'un site web comparateur de prix des produits dans les supermarchés',
-        'Gestion de projet et coordination avec l\'équipe technique'
+        'Mise en place et opération du pipeline CI/CD complet de la plateforme LOBO.IMMO : validation des modifications de code, intégration continue (build, tests automatisés, analyse SAST), packaging Docker et déploiement automatisé',
+        'Automatisation des procédures de déploiement via scripts Python et Bash — élimination des patterns répétitifs et réduction significative des interventions manuelles',
+        'Orchestration des releases : gestion des branches Git, validation des livrables avant merge dans la base commune, coordination avec les équipes de développement',
+        'Rédaction et maintien de la documentation des processus de release et des procédures d\'exploitation'
       ]
     },
     {
       id: 2,
-      title: 'Stagiaire Développeur Full Stack',
-      company: 'LOBO.IMMO',
-      period: 'En cours',
+      title: 'Développeur Web — Intégration & livraison',
+      company: 'CETEC SARL',
+      period: 'Août - Oct. 2022',
       tasks: [
-        'Concevoir un site web de gestion immobilière pour LOBO.IMMO',
-        'Développement de fonctionnalités de gestion des biens, des clients et des transactions',
-        'Intégration de systèmes de prise de rendez-vous et de notifications pour améliorer l\'expérience utilisateur'
+        'Contribution aux processus de validation et de livraison de modifications de code ; participation aux déploiements en production et à la recette technique',
+        'Application rigoureuse des procédures de mise en production et contribution à l\'amélioration continue des processus de livraison'
       ]
     }
   ];
@@ -139,26 +147,29 @@ const Experience = () => {
     <section className="section">
       <h2 className="section-title">
         <span className="title-icon"></span>
-        Expériences
+        Expériences professionnelles
       </h2>
       <div className="experiences-container">
         {experiences.map((exp) => (
-          <div key={exp.id} className="experience-card">
-            <div className="experience-header">
-              <div>
-                <h3 className="experience-title">{exp.title}</h3>
-                <p className="experience-company">{exp.company}</p>
+          <div key={exp.id} className="timeline-item">
+            <span className="timeline-node"></span>
+            <div className="experience-card">
+              <div className="experience-header">
+                <div>
+                  <h3 className="experience-title">{exp.title}</h3>
+                  <p className="experience-company">{exp.company}</p>
+                </div>
+                <span className="experience-date">{exp.period}</span>
               </div>
-              <span className="experience-date">{exp.period}</span>
+              <ul className="experience-list">
+                {exp.tasks.map((task, idx) => (
+                  <li key={idx} className="experience-item">
+                    <span className="list-bullet">•</span>
+                    <span>{task}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="experience-list">
-              {exp.tasks.map((task, idx) => (
-                <li key={idx} className="experience-item">
-                  <span className="list-bullet">•</span>
-                  <span>{task}</span>
-                </li>
-              ))}
-            </ul>
           </div>
         ))}
       </div>
@@ -171,23 +182,23 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "Infrastructure HA — Automatisation & Release pipeline",
+      description: "Pipeline GitLab CI/CD automatisant build, tests, packaging Docker et déploiement multi-serveurs. Automatisation Ansible (IaC) et scripts Python/Bash, monitoring, logging, alerting, HTTPS (Let's Encrypt). Architecture HA : 2 serveurs applicatifs + Load Balancer Nginx, zéro intervention manuelle en production.",
+      tags: ["GitLab CI/CD", "Ansible", "Docker", "Nginx", "Python", "Bash"],
+    },
+    {
+      id: 2,
+      title: "Plateforme GetJob",
+      description: "Développement full stack (React + Supabase) avec déploiement automatisé sur infrastructure cloud (Netlify) et pipeline de livraison continue. Scripting Python pour l'automatisation des traitements backend et modélisation UML.",
+      tags: ["React", "Supabase", "Python", "Netlify", "CI/CD"],
+      link: "https://mygetjop-app.netlify.app/"
+    },
+    {
+      id: 3,
       title: "Comparateur de prix",
       description: "Site web permettant de comparer les prix des produits dans différents supermarchés. Développé avec Svelte et Prisma.",
       tags: ["Svelte", "Scss", "Prisma"],
       link: "https://wangue-price-comparator-bts.vercel.app/"
-    },
-    {
-      id: 2,
-      title: "Mini jeu narratif RPG",
-      description: "Prototype d’un mini jeu narratif où le joueur découvre l’histoire de la princesse Gronnella qui a été enlevée et doit la sauver.",
-      tags: ["HTML", "CSS", "JavaScript"],
-    },
-    {
-      id: 3,
-      title: "Plateforme web Jobs Etudiants",
-      description: "Plateforme web permettant de mettre en relation les étudiants et les entreprises en recherche de nouveaux talents.",
-      tags: ["React", "Vite", "Supabase"],
-      link: "https://my-getjop-app.netlify.app/"
     }
   ];
 
@@ -196,70 +207,43 @@ const Projects = () => {
       <h2 className="section-title"> Projets personnels</h2>
       <div className="projects-grid">
         {projects.map((project) => (
-          <a 
-            key={project.id} 
-            href={project.link} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="project-card"
-            style={{ textDecoration: 'none' }}
-          >
-            <div className="project-header">
-              <h3 className="project-title">{project.title}</h3>
-              <span className="project-icon">🔗</span>
-            </div>
-            <p className="project-description">
-              {project.description}
-            </p>
-            <div className="project-tags">
-              {project.tags.map((tag, i) => (
-                <span key={i} className="project-tag">{tag}</span>
-              ))}
-            </div>
-          </a>
-        ))}
-      </div>
-    </section>
-  );
-};
-
-// Open Source Component
-const contributions = [
-  {
-    id: 1,
-    title: "Fork Commit Merge - Ajout d'une carte",
-    description: "Ajout d'un nouveau composant ( Card ) avec React.js et Vite pour améliorer l'interface utilisateur.",
-    link: "https://github.com/fork-commit-merge"
-  },
-];
-
-const OpenSource = () => {
-  return (
-    <section className="section">
-      <h2 className="section-title">
-        <span className="title-icon">Contributions Open Source</span>
-      
-      </h2>
-      <div className="opensource-container">
-        {contributions.map((item) => (
-          <a
-            key={item.id}
-            href={item.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="opensource-card"
-            style={{ textDecoration: 'none' }}
-          >
-            <div className="opensource-content">
-              <span className="opensource-icon"></span>
-              <div className="opensource-info">
-                <h3 className="opensource-title">{item.title}</h3>
-                <p className="opensource-description">
-                  {item.description}
-                </p>
+          project.link ? (
+            <a
+              key={project.id}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-card"
+              style={{ textDecoration: 'none' }}
+            >
+              <div className="project-header">
+                <h3 className="project-title">{project.title}</h3>
+                <span className="project-icon">🔗</span>
+              </div>
+              <p className="project-description">
+                {project.description}
+              </p>
+              <div className="project-tags">
+                {project.tags.map((tag, i) => (
+                  <span key={i} className="project-tag">{tag}</span>
+                ))}
+              </div>
+            </a>
+          ) : (
+            <div key={project.id} className="project-card">
+              <div className="project-header">
+                <h3 className="project-title">{project.title}</h3>
+              </div>
+              <p className="project-description">
+                {project.description}
+              </p>
+              <div className="project-tags">
+                {project.tags.map((tag, i) => (
+                  <span key={i} className="project-tag">{tag}</span>
+                ))}
               </div>
             </div>
-          </a>
+          )
         ))}
       </div>
     </section>
@@ -270,20 +254,25 @@ const OpenSource = () => {
 const Education = () => {
   const education = [
     {
-      title: 'Bachelor Concepteur & Développeur Web Full Stack (en cours)',
-      school: '3iL Ingénieurs - Limoges',
+      title: 'Expert en Architecture & Développement Logiciel (E.A.D.L )',
+      school: '3iL École d\'ingénieurs - Limoges',
+      period: '2026 - 2028'
+    },
+    {
+      title: 'Bachelor Concepteur & Développeur Web Full Stack (C.D.W.F.S )',
+      school: '3iL École d\'ingénieurs - Limoges',
       period: '2025 - 2026'
     },
-      {
-      title: 'Licence Technologique Génie Logiciel',
-      school: 'IUT Douala',
+    {
+      title: 'Licence Technologique en Genie Logiciel (G.L)',
+      school: 'Institut Universitaire de Technologies - Douala, Cameroun',
       period: '2024 - 2025'
     },
     {
-      title: 'BTS Gestion des Systèmes d\'Information',
-      school: 'IUG Douala',
+      title: 'BTS en Gestion des Systemes d\'Informations (G.S.I)',
+      school: 'Institut Universitaires du Golfe de Guinnée - Douala, Cameroun',
       period: '2022 - 2024'
-    },
+    }
   ];
 
   return (
@@ -291,13 +280,16 @@ const Education = () => {
       <h2 className="section-title"> Formations</h2>
       <div className="education-container">
         {education.map((edu, idx) => (
-          <div key={idx} className="education-card">
-            <div className="education-content">
-              <div>
-                <h3 className="education-title">{edu.title}</h3>
-                <p className="education-school">{edu.school}</p>
+          <div key={idx} className="timeline-item">
+            <span className="timeline-node"></span>
+            <div className="education-card">
+              <div className="education-content">
+                <div>
+                  <h3 className="education-title">{edu.title}</h3>
+                  <p className="education-school">{edu.school}</p>
+                </div>
+                <span className="education-date">{edu.period}</span>
               </div>
-              <span className="education-date">{edu.period}</span>
             </div>
           </div>
         ))}
@@ -312,37 +304,38 @@ const Languages = () => {
     <section className="section">
       <h2 className="section-title"> Langues parlées</h2>
       <div className="languages-container">
-        <span className="language-tag">🇫🇷 Français </span>
-        <span className="language-tag">🇬🇧 Anglais C1</span>
-        <span className="language-tag">🇪🇸 Espagnol B1</span>
+        <span className="language-tag">🇫🇷 Français — Natif</span>
+        <span className="language-tag">🇬🇧 Anglais — C1</span>
+        <span className="language-tag">🇪🇸 Espagnol — B1</span>
       </div>
     </section>
   );
 };
 
-// Atouts Component
-const Strengths = () => {
-  const strengths = [
-    'Adaptabilité et apprentissage rapide',
-    'Esprit d\'équipe et collaboration multiculturelle',
-    'Communication et organisation',
-    'Motivation et persévérance',
-    'Curiosité pour les nouvelles tendances'
+// Certifications Component
+const Certifications = () => {
+  const certifications = [
+    {
+      title: 'AWS Certified Cloud Practitioner',
+      issuer: 'Amazon Web Services',
+      period: '2026'
+    },
+    {
+      title: 'Solutions Architect Associate (en cours)',
+      issuer: 'Amazon Web Services',
+      period: '2026'
+    }
   ];
 
   return (
     <section className="section">
-      <h2 className="section-title">
-        <span className="title-icon"></span>
-        Atouts
-      </h2>
-      <div className="strengths-grid">
-        {strengths.map((strength, idx) => (
-          <div key={idx} className="strength-card">
-            <p className="strength-text">
-              <span className="strength-check">✓</span>
-              {strength}
-            </p>
+      <h2 className="section-title">Certifications</h2>
+      <div className="certifications-grid">
+        {certifications.map((cert, idx) => (
+          <div key={idx} className="certification-card">
+            <span className="certification-badge">{cert.period}</span>
+            <h3 className="certification-title">{cert.title}</h3>
+            <p className="certification-issuer">{cert.issuer}</p>
           </div>
         ))}
       </div>
@@ -375,37 +368,11 @@ const Hobbies = () => {
   );
 };
 
-// Footer Component
-const Certifications = () => {
-  const certifications = [
-    {
-      title: 'AWS Certified Cloud Practitioner',
-      issuer: 'Amazon Web Services',
-      period: '2026'
-    },
-  ];
-
-  return (
-    <section className="section">
-      <h2 className="section-title">Certifications</h2>
-      <div className="certifications-grid">
-        {certifications.map((cert, idx) => (
-          <div key={idx} className="certification-card">
-            <span className="certification-badge">{cert.period}</span>
-            <h3 className="certification-title">{cert.title}</h3>
-            <p className="certification-issuer">{cert.issuer}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-};
-
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p className="footer-text">© 2025 Divane Mael Wangue. Tous droits réservés.</p>
+        <p className="footer-text">© 2026 Divane Mael Wangue. Tous droits réservés.</p>
         <div className="footer-social">
           <a href="https://github.com/DivaneWangue" target="_blank" rel="noopener noreferrer" className="social-link">
             <span><Github size={24} /></span> GitHub
@@ -425,14 +392,12 @@ export default function Portfolio() {
       <main className="main-content">
         <Hero />
         <TechnicalSkills />
-        <AnalyticalSkills />
+        <SoftSkills />
         <Experience />
         <Projects />
         <Certifications />
-        <OpenSource />
         <Education />
         <Languages />
-        <Strengths />
         <Hobbies />
       </main>
       <Footer />
