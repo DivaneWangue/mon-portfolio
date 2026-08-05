@@ -1,3 +1,4 @@
+// src/components/Portfolio.jsx
 import React from 'react';
 import { Mail, Phone, Github, Linkedin } from 'lucide-react';
 import './index.scss';
@@ -9,6 +10,10 @@ const Hero = () => {
     <section className="hero-section">
       <div className="hero-grid">
         <div className="hero-panel">
+          <span className="status-badge">
+            <span className="status-dot"></span>
+            Disponible dès septembre 2026
+          </span>
           <h1 className="hero-title">Divane Mael WANGUE</h1>
           <p className="hero-subtitle">Ingénieur RelOps / DevOps — Release Management, CI/CD, Automatisation & Agents IA</p>
           <p className="hero-description">
@@ -67,10 +72,7 @@ const TechnicalSkills = () => {
 
   return (
     <section className="section">
-      <h2 className="section-title">
-        <span className="title-icon"></span>
-        Compétences techniques
-      </h2>
+      <h2 className="section-title">Compétences techniques</h2>
       <div className="skills-grid">
         {skills.map((skill, idx) => (
           <div key={idx} className="skill-card">
@@ -100,10 +102,7 @@ const SoftSkills = () => {
 
   return (
     <section className="section">
-      <h2 className="section-title">
-        <span className="title-icon"></span>
-        Soft skills
-      </h2>
+      <h2 className="section-title">Soft skills</h2>
       <div className="analytical-grid">
         {skills.map((skill, idx) => (
           <div key={idx} className="analytical-item">
@@ -125,10 +124,10 @@ const Experience = () => {
       company: 'FANANAS-HORTOLARY-LUPETTE',
       period: 'Juin - Sept. 2026',
       tasks: [
-        'Mise en place et opération du pipeline CI/CD complet de la plateforme LOBO.IMMO : validation des modifications de code, intégration continue (build, tests automatisés, analyse SAST), packaging Docker et déploiement automatisé',
-        'Automatisation des procédures de déploiement via scripts Python et Bash — élimination des patterns répétitifs et réduction significative des interventions manuelles',
-        'Orchestration des releases : gestion des branches Git, validation des livrables avant merge dans la base commune, coordination avec les équipes de développement',
-        'Rédaction et maintien de la documentation des processus de release et des procédures d\'exploitation'
+        "Conçu et exploité le pipeline CI/CD complet (GitLab CI) de la plateforme immobilière LOBO.IMMO : build, tests automatisés, analyse SAST, packaging Docker et déploiement continu en production",
+        "Piloté l'orchestration des releases : gestion des branches Git, revue et validation des livrables avant merge, coordination avec les équipes de développement",
+        "Automatisé les déploiements et la synchronisation avec l'ERP immobilier (flux XML) via des scripts Python et Bash, éliminant les interventions manuelles répétitives",
+        "Déployé et sécurisé l'infrastructure de production (VPS, Nginx, PostgreSQL, HTTPS/Let's Encrypt) et rédigé la documentation des procédures de release et d'exploitation"
       ]
     },
     {
@@ -145,10 +144,7 @@ const Experience = () => {
 
   return (
     <section className="section">
-      <h2 className="section-title">
-        <span className="title-icon"></span>
-        Expériences professionnelles
-      </h2>
+      <h2 className="section-title">Expériences professionnelles</h2>
       <div className="experiences-container">
         {experiences.map((exp) => (
           <div key={exp.id} className="timeline-item">
@@ -181,6 +177,13 @@ const Experience = () => {
 const Projects = () => {
   const projects = [
     {
+    id: 1,
+    title: "LOBO.IMMO — Plateforme immobilière",
+    description: "Site immobilier fullstack (React + Symfony) avec synchronisation ERP en temps réel (flux XML IMMOFACILE), pipeline CI/CD GitLab (build, tests, déploiement automatisé) et infrastructure de production sécurisée : VPS Hetzner, Nginx, PostgreSQL, HTTPS (Let's Encrypt).",
+    tags: ["React", "Symfony", "PostgreSQL", "GitLab CI/CD", "Nginx"],
+    link: "https://lobo.immo"
+    },
+    {
       id: 1,
       title: "Infrastructure HA — Automatisation & Release pipeline",
       description: "Pipeline GitLab CI/CD automatisant build, tests, packaging Docker et déploiement multi-serveurs. Automatisation Ansible (IaC) et scripts Python/Bash, monitoring, logging, alerting, HTTPS (Let's Encrypt). Architecture HA : 2 serveurs applicatifs + Load Balancer Nginx, zéro intervention manuelle en production.",
@@ -191,7 +194,7 @@ const Projects = () => {
       title: "Plateforme GetJob",
       description: "Développement full stack (React + Supabase) avec déploiement automatisé sur infrastructure cloud (Netlify) et pipeline de livraison continue. Scripting Python pour l'automatisation des traitements backend et modélisation UML.",
       tags: ["React", "Supabase", "Python", "Netlify", "CI/CD"],
-      link: "https://mygetjop-app.netlify.app/"
+      link: "https://my-getjop-app.netlify.app/"
     },
     {
       id: 3,
@@ -204,7 +207,7 @@ const Projects = () => {
 
   return (
     <section className="section">
-      <h2 className="section-title"> Projets personnels</h2>
+      <h2 className="section-title">Projets personnels</h2>
       <div className="projects-grid">
         {projects.map((project) => (
           project.link ? (
@@ -277,7 +280,7 @@ const Education = () => {
 
   return (
     <section className="section">
-      <h2 className="section-title"> Formations</h2>
+      <h2 className="section-title">Formations</h2>
       <div className="education-container">
         {education.map((edu, idx) => (
           <div key={idx} className="timeline-item">
@@ -302,7 +305,7 @@ const Education = () => {
 const Languages = () => {
   return (
     <section className="section">
-      <h2 className="section-title"> Langues parlées</h2>
+      <h2 className="section-title">Langues parlées</h2>
       <div className="languages-container">
         <span className="language-tag">🇫🇷 Français — Natif</span>
         <span className="language-tag">🇬🇧 Anglais — C1</span>
@@ -355,7 +358,7 @@ const Hobbies = () => {
 
   return (
     <section className="section">
-      <h2 className="section-title"> Loisirs & Centres d'Intérêt</h2>
+      <h2 className="section-title">Loisirs & Centres d'Intérêt</h2>
       <div className="hobbies-grid">
         {hobbies.map((hobby, idx) => (
           <div key={idx} className="hobby-card">
