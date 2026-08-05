@@ -14,14 +14,15 @@ const Hero = () => {
             <span className="status-dot"></span>
             Disponible dès septembre 2026
           </span>
-          <h1 className="hero-title">Divane Mael WANGUE</h1>
-          <p className="hero-subtitle">Ingénieur RelOps / DevOps — Release Management, CI/CD, Automatisation & Agents IA</p>
+          <h1 className="hero-title">Divane WANGUE</h1>
+          <p className="hero-subtitle">Ingénieur RelOps / DevOps / Full Stack, Release Management, CI/CD, Automatisation & Agents IA</p>
           <p className="hero-description">
-            Futur Expert en Architecture et Développement Logiciel (Bac+5), je recherche une alternance
-            en Release Management / DevOps de 2 ans (rythme 4 semaines entreprise / 4 semaines école,
-            disponible dès septembre 2026), avec un intérêt marqué pour l'orchestration des releases,
-            l'automatisation des déploiements, la fiabilisation des systèmes et l'intégration d'agents IA
-            dans les processus d'exploitation.
+            Futur Expert en Architecture et Développement Logiciel, je me spécialise en
+            ingénierie DevOps et automatisation des processus de release management. Maîtrisant
+            Python, Jenkins, Ansible, Docker et les pipelines CI/CD, j'ai une appétence marquée pour
+            l'automatisation des patterns répétitifs et la mise en place d'agents IA. Rigoureux et
+            curieux, capable d'appliquer des procédures tout en cherchant en permanence à les
+            améliorer.
           </p>
 
           <div className="hero-actions">
@@ -29,11 +30,11 @@ const Hero = () => {
               Télécharger CV
             </a>
             <a href="mailto:divanewangue2@gmail.com" className="contact-item">
-              <Mail size={14} />
+              <Mail size={20} />
               <span>divanewangue2@gmail.com</span>
             </a>
             <a href="tel:+33743617761" className="contact-item">
-              <Phone size={14} />
+              <Phone size={20} />
               <span>+33 7 43 61 77 61</span>
             </a>
           </div>
@@ -60,12 +61,12 @@ const TechnicalSkills = () => {
     },
     {
       category: 'DevOps & Automatisation',
-      items: ['Jenkins', 'Ansible', 'Docker', 'Kubernetes (notions)', 'GitLab CI', 'GitHub Actions', 'Terraform', 'Linux (Ubuntu, Debian)', 'Bash'],
+      items: [ 'Terraform', 'Ansible', 'Docker', 'Kubernetes (notions)', 'GitLab CI', 'GitHub Actions','Jenkins', 'Linux (Ubuntu, Debian)', 'Bash'],
       icon: 'OPS'
     },
     {
       category: 'Développement & IA',
-      items: ['Python', 'React', 'Supabase / API REST', 'SQL', 'Agents IA (LLM)', 'Modélisation UML'],
+      items: ['React','Svelte', 'Symfony', 'Python', 'Java', 'Supabase / API REST', 'Prisma', 'Netlify', 'SQL', 'Agents IA (LLM)', 'Modélisation UML', 'Figma', 'Draw.io'],
       icon: 'DEV'
     }
   ];
@@ -120,19 +121,20 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      title: 'Ingénieur DevOps / RelOps — Full Stack',
-      company: 'FANANAS-HORTOLARY-LUPETTE',
+      title: 'Ingénieur DevOps / RelOps - Full Stack',
+      company: 'SCP FANANAS - HORTOLARY - LUPETTE',
       period: 'Juin - Sept. 2026',
       tasks: [
-        "Conçu et exploité le pipeline CI/CD complet (GitLab CI) de la plateforme immobilière LOBO.IMMO : build, tests automatisés, analyse SAST, packaging Docker et déploiement continu en production",
-        "Piloté l'orchestration des releases : gestion des branches Git, revue et validation des livrables avant merge, coordination avec les équipes de développement",
-        "Automatisé les déploiements et la synchronisation avec l'ERP immobilier (flux XML) via des scripts Python et Bash, éliminant les interventions manuelles répétitives",
-        "Déployé et sécurisé l'infrastructure de production (VPS, Nginx, PostgreSQL, HTTPS/Let's Encrypt) et rédigé la documentation des procédures de release et d'exploitation"
+        "Développement full stack (React + Symfony) de la plateforme immobilière LOBO.IMMO avec synchronisation ERP en temps réel (flux XML IMMOFACILE)",
+        "Conception et exploitation du pipeline CI/CD complet (GitLab CI) de la plateforme immobilière LOBO.IMMO : build, tests automatisés, analyse SAST, packaging Docker et déploiement continu en production",
+        "Pilotage de l'orchestration des releases : gestion des branches Git, revue et validation des livrables avant merge",
+        "Automatisation des déploiements et de la synchronisation avec l'ERP immobilier (flux XML) via des scripts Python et Bash, éliminant les interventions manuelles répétitives",
+        "Déploiement et sécurisation de l'infrastructure de production (VPS, Nginx, PostgreSQL, HTTPS/Let's Encrypt) et rédaction de la documentation des procédures de release et d'exploitation"
       ]
     },
     {
       id: 2,
-      title: 'Développeur Web — Intégration & livraison',
+      title: 'Développeur Web - Intégration & livraison',
       company: 'CETEC SARL',
       period: 'Août - Oct. 2022',
       tasks: [
@@ -178,14 +180,14 @@ const Projects = () => {
   const projects = [
     {
     id: 1,
-    title: "LOBO.IMMO — Plateforme immobilière",
+    title: "LOBO.IMMO - Plateforme immobilière",
     description: "Site immobilier fullstack (React + Symfony) avec synchronisation ERP en temps réel (flux XML IMMOFACILE), pipeline CI/CD GitLab (build, tests, déploiement automatisé) et infrastructure de production sécurisée : VPS Hetzner, Nginx, PostgreSQL, HTTPS (Let's Encrypt).",
     tags: ["React", "Symfony", "PostgreSQL", "GitLab CI/CD", "Nginx"],
     link: "https://lobo.immo"
     },
     {
       id: 1,
-      title: "Infrastructure HA — Automatisation & Release pipeline",
+      title: "Infrastructure HA - Automatisation & Release pipeline",
       description: "Pipeline GitLab CI/CD automatisant build, tests, packaging Docker et déploiement multi-serveurs. Automatisation Ansible (IaC) et scripts Python/Bash, monitoring, logging, alerting, HTTPS (Let's Encrypt). Architecture HA : 2 serveurs applicatifs + Load Balancer Nginx, zéro intervention manuelle en production.",
       tags: ["GitLab CI/CD", "Ansible", "Docker", "Nginx", "Python", "Bash"],
     },
@@ -207,7 +209,7 @@ const Projects = () => {
 
   return (
     <section className="section">
-      <h2 className="section-title">Projets personnels</h2>
+      <h2 className="section-title">Projets </h2>
       <div className="projects-grid">
         {projects.map((project) => (
           project.link ? (
@@ -268,12 +270,12 @@ const Education = () => {
     },
     {
       title: 'Licence Technologique en Genie Logiciel (G.L)',
-      school: 'Institut Universitaire de Technologies - Douala, Cameroun',
+      school: 'Institut Universitaire de Technologies, Douala - Cameroun',
       period: '2024 - 2025'
     },
     {
       title: 'BTS en Gestion des Systemes d\'Informations (G.S.I)',
-      school: 'Institut Universitaires du Golfe de Guinnée - Douala, Cameroun',
+      school: 'Institut Universitaires du Golfe de Guinnée, Douala - Cameroun',
       period: '2022 - 2024'
     }
   ];
@@ -307,9 +309,9 @@ const Languages = () => {
     <section className="section">
       <h2 className="section-title">Langues parlées</h2>
       <div className="languages-container">
-        <span className="language-tag">🇫🇷 Français — Natif</span>
-        <span className="language-tag">🇬🇧 Anglais — C1</span>
-        <span className="language-tag">🇪🇸 Espagnol — B1</span>
+        <span className="language-tag">🇫🇷 Français - Natif</span>
+        <span className="language-tag">🇬🇧 Anglais - C1</span>
+        <span className="language-tag">🇪🇸 Espagnol - B1</span>
       </div>
     </section>
   );
@@ -375,12 +377,12 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p className="footer-text">© 2026 Divane Mael Wangue. Tous droits réservés.</p>
+        <p className="footer-text">© 2026 Divane WANGUE. Tous droits réservés.</p>
         <div className="footer-social">
           <a href="https://github.com/DivaneWangue" target="_blank" rel="noopener noreferrer" className="social-link">
             <span><Github size={24} /></span> GitHub
           </a>
-          <a href="https://linkedin.com/in/divane-mael-wangue-49a567350" target="_blank" rel="noopener noreferrer" className="social-link">
+          <a href="https://www.linkedin.com/in/divane-wangue-49a567350/" target="_blank" rel="noopener noreferrer" className="social-link">
             <span><Linkedin size={24} /></span> LinkedIn
           </a>
         </div>
