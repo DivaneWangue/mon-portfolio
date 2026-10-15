@@ -10,19 +10,16 @@ const Hero = () => {
     <section className="hero-section">
       <div className="hero-grid">
         <div className="hero-panel">
-          <span className="status-badge">
-            <span className="status-dot"></span>
-            Disponible dès septembre 2026
-          </span>
           <h1 className="hero-title">Divane WANGUE</h1>
-          <p className="hero-subtitle">Ingénieur RelOps / DevOps / Full Stack, Release Management, CI/CD, Automatisation & Agents IA</p>
+          <p className="hero-subtitle">Apprenti Ingénieur RelOps & DevOps - Dassault Systèmes</p>
           <p className="hero-description">
-            Futur Expert en Architecture et Développement Logiciel, je me spécialise en
-            ingénierie DevOps et automatisation des processus de release management. Maîtrisant
-            Python, Jenkins, Ansible, Docker et les pipelines CI/CD, j'ai une appétence marquée pour
-            l'automatisation des patterns répétitifs et la mise en place d'agents IA. Rigoureux et
-            curieux, capable d'appliquer des procédures tout en cherchant en permanence à les
-            améliorer.
+
+            <p>Au sein de l'équipe ENOVIA RelOps, je contribue à l'orchestration et à
+            l'automatisation des processus de release management pour les
+            logiciels PLM les plus utilisés au monde.
+            </p>
+
+            Stack : Python · Jenkins · GitLab CI · Docker · Linux · Git · Ansible
           </p>
 
           <div className="hero-actions">
@@ -121,7 +118,21 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      title: 'Ingénieur DevOps / RelOps - Full Stack',
+      title: 'Ingénieur RelOps / DevOps - Full Stack',
+      company: 'DASSAULT SYSTEMES - ENOVIA RelOps',
+      period: 'Sep. 2026 - Aujourd\'hui',
+      tasks: [
+        "Exécution et automatisation des procédures de release management à l'échelle de la R&D mondiale (Europe, Asie, Amérique)",
+        'Apprentissage et maîtrise progressive du métier de Release Manager : process, outils, ressources hardware, management transversal',
+        "Compréhension des enjeux présents et futurs du release management dans un contexte de transformation par l'IA",
+        'Contribution à la définition, l’implémentation et le déploiement des agents IA qui accompagneront le Release Manager de demain',
+        'Automatisation des patterns répétitifs du cycle de release via Python, Jenkins, Ansible et Docker',
+        "Participation à l'amélioration continue des processus de l'équipe et partage des solutions développées à l'ensemble de la R&D"
+      ]
+    },
+    {
+      id: 2,
+      title: 'Ingénieur DevOps - Full Stack',
       company: 'SCP FANANAS - HORTOLARY - LUPETTE',
       period: 'Juin - Sept. 2026',
       tasks: [
@@ -133,7 +144,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 2,
+      id: 3,
       title: 'Développeur Web - Intégration & livraison',
       company: 'CETEC SARL',
       period: 'Août - Oct. 2022',
@@ -141,7 +152,7 @@ const Experience = () => {
         'Contribution aux processus de validation et de livraison de modifications de code ; participation aux déploiements en production et à la recette technique',
         'Application rigoureuse des procédures de mise en production et contribution à l\'amélioration continue des processus de livraison'
       ]
-    }
+    },
   ];
 
   return (
